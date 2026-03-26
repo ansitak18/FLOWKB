@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban — Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Ambient background orbs -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<main>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">Flow</span>
+    </div>
+    <div class="nav-center">
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Search tasks…" />
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="btn-ghost" id="toggleTheme" title="Toggle theme">◑</button>
+      <button class="btn-primary" id="toggle-modal">+ New Task</button>
+    </div>
+  </nav>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-pill" id="totalStat"><span class="stat-num">0</span><span class="stat-label">Total</span></div>
+    <div class="stat-pill todo-pill"><span class="stat-num" id="todoCount">0</span><span class="stat-label">To Do</span></div>
+    <div class="stat-pill prog-pill"><span class="stat-num" id="progressCount">0</span><span class="stat-label">In Progress</span></div>
+    <div class="stat-pill done-pill"><span class="stat-num" id="doneCount">0</span><span class="stat-label">Done</span></div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+      <span class="progress-label" id="progressLabel">0% complete</span>
+    </div>
+  </div>
+
+  <!-- BOARD -->
+  <section class="board">
+    <script src="script.js"></script>
+</body>
+</html>
