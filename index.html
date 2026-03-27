@@ -51,6 +51,96 @@
 
   <!-- BOARD -->
   <section class="board">
+
+    <!-- TO DO -->
+    <div class="task-column" id="todo">
+      <div class="col-header">
+        <div class="col-title-wrap">
+          <span class="col-dot dot-todo"></span>
+          <h2 class="col-title">To Do</h2>
+        </div>
+        <span class="col-count" id="todo-badge">0</span>
+      </div>
+      <div class="tasks-list" id="todo-list"></div>
+      <button class="col-add-btn" data-col="todo">＋ Add task</button>
+    </div>
+
+    <!-- IN PROGRESS -->
+    <div class="task-column" id="progress">
+      <div class="col-header">
+        <div class="col-title-wrap">
+          <span class="col-dot dot-prog"></span>
+          <h2 class="col-title">In Progress</h2>
+        </div>
+        <span class="col-count" id="progress-badge">0</span>
+      </div>
+      <div class="tasks-list" id="progress-list"></div>
+      <button class="col-add-btn" data-col="progress">＋ Add task</button>
+    </div>
+
+    <!-- DONE -->
+    <div class="task-column" id="done">
+      <div class="col-header">
+        <div class="col-title-wrap">
+          <span class="col-dot dot-done"></span>
+          <h2 class="col-title">Done</h2>
+        </div>
+        <span class="col-count" id="done-badge">0</span>
+      </div>
+      <div class="tasks-list" id="done-list"></div>
+      <button class="col-add-btn" data-col="done">＋ Add task</button>
+    </div>
+
+  </section>
+</main>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-bg" id="modalBg"></div>
+  <div class="modal-card" id="modalCard">
+    <div class="modal-header">
+      <h3 id="modalTitle">New Task</h3>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <div class="modal-body">
+      <label>Title</label>
+      <input type="text" id="task-title-input" placeholder="What needs to be done?" />
+
+      <label>Description</label>
+      <textarea id="task-desc-input" placeholder="Add details…" rows="3"></textarea>
+
+      <div class="modal-row">
+        <div class="modal-field">
+          <label>Priority</label>
+          <div class="priority-group" id="priorityGroup">
+            <button class="pri-btn" data-pri="low">Low</button>
+            <button class="pri-btn active" data-pri="medium">Medium</button>
+            <button class="pri-btn" data-pri="high">High</button>
+          </div>
+        </div>
+        <div class="modal-field">
+          <label>Due Date</label>
+          <input type="date" id="task-due-input" />
+        </div>
+      </div>
+
+      <label>Column</label>
+      <div class="col-select-group" id="colSelectGroup">
+        <button class="col-sel-btn active" data-col="todo">To Do</button>
+        <button class="col-sel-btn" data-col="progress">In Progress</button>
+        <button class="col-sel-btn" data-col="done">Done</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="cancelBtn">Cancel</button>
+      <button class="btn-primary" id="add-new-task">Save Task</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
